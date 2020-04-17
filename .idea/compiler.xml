@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ad-eureka" />
+        <module name="ad-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ad-eureka" target="1.8" />
+      <module name="ad-gateway" target="1.8" />
       <module name="adSystem" target="1.8" />
     </bytecodeTargetLevel>
   </component>
