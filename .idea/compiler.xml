@@ -9,6 +9,7 @@
         <module name="ad-common" />
         <module name="ad-eureka" />
         <module name="ad-gateway" />
+        <module name="ad-sponsor" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
       <module name="ad-eureka" target="1.8" />
       <module name="ad-gateway" target="1.8" />
       <module name="ad-service" target="1.8" />
+      <module name="ad-sponsor" target="1.8" />
       <module name="adSystem" target="1.8" />
     </bytecodeTargetLevel>
   </component>
