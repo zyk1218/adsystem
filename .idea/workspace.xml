@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e205d572-0781-4f8c-b7d5-6ed0dd2b69db" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/controller/UserOPController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/controller/AdPlanOPController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,14 +21,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserOPController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserOPController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/controller/UserOPController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="314">
+              <caret line="28" column="77" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="77" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#744#745#0" expanded="true" />
                 <element signature="e#790#791#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdPlanOPController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/controller/AdPlanOPController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="794">
+              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#717#718#0" expanded="true" />
+                <element signature="e#767#768#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdPlanRequest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/vo/AdPlanRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,7 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/resources/README" />
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/SponsorApplication.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/constant/CommonStatus.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/entity/AdUser.java" />
@@ -128,6 +154,7 @@
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/service/IAdUnitService.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/service/impl/AdUnitServiceImpl.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/controller/UserOPController.java" />
+        <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/controller/AdPlanOPController.java" />
       </list>
     </option>
   </component>
@@ -765,6 +792,30 @@
               <item name="ad-sponsor" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="remember" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="adSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="adSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-service" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-sponsor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="remember" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="adSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="adSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-service" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-sponsor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -927,12 +978,12 @@
       <workItem from="1585315704549" duration="1111000" />
       <workItem from="1586766717133" duration="4387000" />
       <workItem from="1586942593980" duration="4592000" />
-      <workItem from="1587201712323" duration="38377000" />
+      <workItem from="1587201712323" duration="39175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57591000" />
+    <option name="totallyTimeSpent" value="58389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -982,14 +1033,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/entity/unit_condition/AdUnitDistrict.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="18" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/entity/AdUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1123,20 +1166,6 @@
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/vo/AdPlanRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-            <element signature="e#777#778#0" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1457,11 +1486,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/controller/UserOPController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="314">
+          <caret line="28" column="77" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="77" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#744#745#0" expanded="true" />
             <element signature="e#790#791#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/vo/AdPlanRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/controller/AdPlanOPController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#767#768#0" expanded="true" />
           </folding>
         </state>
       </provider>
