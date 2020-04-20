@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e205d572-0781-4f8c-b7d5-6ed0dd2b69db" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/controller/CreativeOPController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ad-gateway/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/ad-gateway/src/main/resources/application.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -63,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreativeOPController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreativeOPController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/controller/CreativeOPController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="284">
@@ -73,6 +73,26 @@
                 <element signature="e#768#769#0" expanded="true" />
                 <element signature="e#822#823#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ad-gateway/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -144,7 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/entity/AdUser.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/entity/AdPlan.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/entity/AdUnit.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/entity/unit_condition/AdUnitKeyword.java" />
@@ -195,6 +214,7 @@
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/controller/AdPlanOPController.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/controller/AdUnitOPController.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/controller/CreativeOPController.java" />
+        <option value="$PROJECT_DIR$/ad-gateway/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -772,88 +792,25 @@
             <path>
               <item name="adSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="adSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-service" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-gateway" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="adSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="adSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-service" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-sponsor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="adSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="adSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-service" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-sponsor" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="adSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="adSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-service" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-sponsor" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="adSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="adSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-service" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-sponsor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="adSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="adSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-service" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-sponsor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="adSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="adSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-service" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-sponsor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="remember" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="adSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="adSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-service" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-sponsor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="remember" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="adSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="adSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-service" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-sponsor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="remember" type="462c0819:PsiDirectoryNode" />
-              <item name="vo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="adSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="adSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-service" type="462c0819:PsiDirectoryNode" />
-              <item name="ad-sponsor" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-gateway" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -1018,12 +975,12 @@
       <workItem from="1585315704549" duration="1111000" />
       <workItem from="1586766717133" duration="4387000" />
       <workItem from="1586942593980" duration="4592000" />
-      <workItem from="1587201712323" duration="40292000" />
+      <workItem from="1587201712323" duration="40574000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59506000" />
+    <option name="totallyTimeSpent" value="59788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -1073,14 +1030,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/constant/CreativeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/dao/README">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1488,14 +1437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/controller/UserOPController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -1561,6 +1502,22 @@
             <element signature="e#768#769#0" expanded="true" />
             <element signature="e#822#823#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ad-gateway/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
