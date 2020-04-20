@@ -3,14 +3,17 @@ package com.remember.service.impl;
 import com.remember.constant.Constants;
 import com.remember.dao.AdPlanRepository;
 import com.remember.dao.AdUnitRepository;
+import com.remember.dao.CreativeRepository;
 import com.remember.dao.unit_condition.AdUnitDistrictRepository;
 import com.remember.dao.unit_condition.AdUnitItRepository;
 import com.remember.dao.unit_condition.AdUnitKeywordRepository;
+import com.remember.dao.unit_condition.CreativeUnitRepository;
 import com.remember.entity.AdPlan;
 import com.remember.entity.AdUnit;
 import com.remember.entity.unit_condition.AdUnitDistrict;
 import com.remember.entity.unit_condition.AdUnitIt;
 import com.remember.entity.unit_condition.AdUnitKeyword;
+import com.remember.entity.unit_condition.CreativeUnit;
 import com.remember.exception.AdException;
 import com.remember.service.IAdUnitService;
 import com.remember.vo.*;
@@ -32,14 +35,18 @@ public class AdUnitServiceImpl implements IAdUnitService{
     private final AdUnitKeywordRepository unitKeywordRepository;
     private final AdUnitItRepository unitItRepository;
     private final AdUnitDistrictRepository districtRepository;
+    private final CreativeRepository creativeRepository;
+    private final CreativeUnitRepository creativeUnitRepository;
 
     @Autowired
-    public AdUnitServiceImpl(AdPlanRepository planRepository, AdUnitRepository unitRepository, AdUnitKeywordRepository unitKeywordRepository, AdUnitItRepository unitItRepository, AdUnitDistrictRepository districtRepository) {
+    public AdUnitServiceImpl(AdPlanRepository planRepository, AdUnitRepository unitRepository, AdUnitKeywordRepository unitKeywordRepository, AdUnitItRepository unitItRepository, AdUnitDistrictRepository districtRepository, CreativeRepository creativeRepository, CreativeUnitRepository creativeUnitRepository) {
         this.planRepository = planRepository;
         this.unitRepository = unitRepository;
         this.unitKeywordRepository = unitKeywordRepository;
         this.unitItRepository = unitItRepository;
         this.districtRepository = districtRepository;
+        this.creativeRepository = creativeRepository;
+        this.creativeUnitRepository = creativeUnitRepository;
     }
 
     @Override
@@ -108,11 +115,33 @@ public class AdUnitServiceImpl implements IAdUnitService{
         return new AdUnitDistrictResponse(ids);
     }
 
+    @Override
+    public CreativeUnitResponse createCreativeUnit(CreativeUnitRequest request) throws AdException {
+        List<Long> unitIds = request.getUnitItems().stream().map(CreativeUnitRequest.CreativeUnitItem::getUnitId).collect(Collectors.toList());
+        List<Long> creativeIds = request.getUnitItems().stream().map(CreativeUnitRequest.CreativeUnitItem::getCreativeId).collect(Collectors.toList());
+        if(isRelatedUnitExist(unitIds) && isCreativeExist(creativeIds)){
+            throw new AdException(Constants.ErrorMessage.REQUEST_PARAM_ERROR);
+        }
+        List<CreativeUnit> creativeUnits = new ArrayList<>();
+        request.getUnitItems().stream().forEach(
+                i -> creativeUnits.add(new CreativeUnit(i.getCreativeId(),i.getUnitId()))
+        );
+        List<Long> ids = creativeUnitRepository.saveAll(creativeUnits).stream().map(CreativeUnit::getId).collect(Collectors.toList());
+        return new CreativeUnitResponse(ids);
+    }
+
     //校验传入进来的UnitIds是否合法
     public boolean isRelatedUnitExist(List<Long> unitIds){
         if(CollectionUtils.isEmpty(unitIds)){
             return false;
         }
         return unitRepository.findAllById(unitIds).size() == new HashSet<>(unitIds).size();
+    }
+    //判断Creative是否存在
+    public boolean isCreativeExist(List<Long> creativeIds){
+        if(CollectionUtils.isEmpty(creativeIds)){
+            return false;
+        }
+        return creativeRepository.findAllById(creativeIds).size() == new HashSet<>(creativeIds).size();
     }
 }

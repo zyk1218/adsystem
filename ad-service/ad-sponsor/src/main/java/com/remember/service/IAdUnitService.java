@@ -1,8 +1,7 @@
 package com.remember.service;
 
-import com.remember.entity.unit_condition.AdUnitDistrict;
-import com.remember.entity.unit_condition.AdUnitIt;
-import com.remember.entity.unit_condition.AdUnitKeyword;
+
+import com.remember.entity.unit_condition.CreativeUnit;
 import com.remember.exception.AdException;
 import com.remember.vo.*;
 
@@ -19,4 +18,6 @@ public interface IAdUnitService {
     AdUnitItResponse createAdUnitIt(AdUnitItRequest request) throws AdException;
 
     AdUnitDistrictResponse createAdUnitDistrict(AdUnitDistrictRequest request) throws AdException;
+
+    CreativeUnitResponse createCreativeUnit(CreativeUnitRequest request) throws AdException;
 }
