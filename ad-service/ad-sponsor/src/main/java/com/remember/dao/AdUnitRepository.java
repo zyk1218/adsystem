@@ -11,7 +11,7 @@ import java.util.List;
  * AdUnit Dao
   */
 public interface AdUnitRepository extends JpaRepository<AdUnit,Long>{
-    AdUnit findByPlanIdAndUnitName(Integer planId,String unitName);
+    AdUnit findByPlanIdAndUnitName(Long planId,String unitName);
 
     List<AdUnit> findAllByUnitStatus(Integer unitStatus);
 }
