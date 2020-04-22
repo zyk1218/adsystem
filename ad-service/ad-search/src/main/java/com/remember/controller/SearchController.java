@@ -2,6 +2,7 @@ package com.remember.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.remember.annotation.IgnoreResponseAdvice;
+import com.remember.client.SponsorClient;
 import com.remember.client.vo.AdPlan;
 import com.remember.client.vo.AdPlanGetRequest;
 import com.remember.vo.CommonResponse;
@@ -24,16 +25,29 @@ public class SearchController {
 
     private final RestTemplate restTemplate;
 
+    private final SponsorClient sponsorClient;
+
     @Autowired
-    public SearchController(RestTemplate restTemplate) {
+    public SearchController(RestTemplate restTemplate, SponsorClient sponsorClient) {
         this.restTemplate = restTemplate;
+        this.sponsorClient = sponsorClient;
     }
     @SuppressWarnings("all")
     @IgnoreResponseAdvice //不对该响应进行拦截。
     @PostMapping("/getAdPlansByRibbon")
     public CommonResponse<List<AdPlan>> getAdPlansByRibbon(@RequestBody AdPlanGetRequest request){
-        log.info("ad-search : get adPlan -> {}", JSON.toJSONString(request));
+        log.info("ad-search : get adPlanByRibbon -> {}", JSON.toJSONString(request));
         return restTemplate.postForEntity("http://eureka-client-ad-sponsor/ad-sponsor/get/adPlan",
                 request,CommonResponse.class).getBody();
     }
+    @SuppressWarnings("all")
+    @IgnoreResponseAdvice //不对该响应进行拦截。
+    @PostMapping("/getAdPlans")
+    public CommonResponse<List<AdPlan>> getAdPlansByFeign(@RequestBody AdPlanGetRequest request){
+        log.info("ad-search : get adPlanByFeign -> {}", JSON.toJSONString(request));
+        return sponsorClient.getAdPlans(request);
+    }
+
+
+
 }
