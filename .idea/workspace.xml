@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e205d572-0781-4f8c-b7d5-6ed0dd2b69db" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0_M1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/keyword/UnitKeywordIndex.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/keyword/UnitKeywordObject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/utils/CommonUtils.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ad-eureka/target/classes/application.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ad-eureka/target/classes/com/remember/EurekaApplication.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ad-eureka/target/classes/com/remember/sche/Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ad-gateway/target/classes/application.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ad-gateway/target/classes/com/remember/ZuulGatewayApplication.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ad-gateway/target/classes/com/remember/filter/AccessLogFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ad-gateway/target/classes/com/remember/filter/PreRequestFilter.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/interest/UnitItIndex.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/interest/UnitItObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ad-service/ad-search/ad-search.iml" afterPath="$PROJECT_DIR$/ad-service/ad-search/ad-search.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ad-service/ad-search/pom.xml" afterPath="$PROJECT_DIR$/ad-service/ad-search/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,13 +23,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UnitKeywordIndex.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UnitKeywordIndex.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/keyword/UnitKeywordIndex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="79" column="72" lean-forward="false" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
+            <state relative-caret-position="204">
+              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnitItObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/interest/UnitItObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnitItIndex.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/interest/UnitItIndex.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="65" column="81" lean-forward="true" selection-start-line="65" selection-start-column="81" selection-end-line="65" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#831#832#0" expanded="true" />
+                <element signature="e#872#873#0" expanded="true" />
+                <element signature="e#941#942#0" expanded="true" />
+                <element signature="e#1001#1002#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,8 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/vo/AdPlanRequest.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/vo/AdPlanResponse.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/service/IAdPlanService.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/utils/CommonUtils.java" />
@@ -148,6 +162,8 @@
         <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/utils/CommonUtils.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/adunit/Main.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/keyword/UnitKeywordIndex.java" />
+        <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/interest/UnitItObject.java" />
+        <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/interest/UnitItIndex.java" />
       </list>
     </option>
   </component>
@@ -818,11 +834,20 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="remember" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
-              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="interest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="adSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="adSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-service" type="462c0819:PsiDirectoryNode" />
+              <item name="ad-search" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="remember" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -858,7 +883,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Spring Boot.EurekaApplication">
     <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.remember.EurekaApplication" />
@@ -1005,12 +1030,12 @@
       <workItem from="1586766717133" duration="4387000" />
       <workItem from="1586942593980" duration="4592000" />
       <workItem from="1587201712323" duration="66164000" />
-      <workItem from="1587636864820" duration="896000" />
+      <workItem from="1587636864820" duration="3687000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86274000" />
+    <option name="totallyTimeSpent" value="89065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -1060,20 +1085,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/vo/CreativeResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/service/impl/CreativeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="33" column="71" lean-forward="false" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ad-service/ad-sponsor/src/main/java/com/remember/entity/unit_condition/CreativeUnit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
@@ -1296,6 +1307,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1310,6 +1322,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="32" column="43" lean-forward="true" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1324,6 +1339,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1360,6 +1378,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
           <caret line="53" column="45" lean-forward="false" selection-start-line="51" selection-start-column="9" selection-end-line="53" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#605#606#0" expanded="false" />
+            <element signature="e#646#647#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1367,6 +1390,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="579">
           <caret line="49" column="46" lean-forward="false" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#543#544#0" expanded="false" />
+            <element signature="e#584#585#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1413,12 +1441,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/keyword/UnitKeywordIndex.java">
+    <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/interest/UnitItObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="79" column="72" lean-forward="false" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
+        <state relative-caret-position="434">
+          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/keyword/UnitKeywordIndex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/interest/UnitItIndex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="65" column="81" lean-forward="true" selection-start-line="65" selection-start-column="81" selection-end-line="65" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#1001#1002#0" expanded="true" />
           </folding>
         </state>
       </provider>
