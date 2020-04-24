@@ -13,7 +13,7 @@ spring:
       hibernate.format_sql: true
     open-in-view: false
   datasource:
-    url: jdbc:mysql://localhost:3306/adSystem?autoReconnect=true
+    url: jdbc:mysql://127.0.0.1:3306/adSystem?autoReconnect=true
     username: root
     password: 1234
     tomcat:

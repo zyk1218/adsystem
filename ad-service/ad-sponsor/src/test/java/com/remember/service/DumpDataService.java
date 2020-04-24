@@ -10,13 +10,17 @@ import com.remember.dao.unit_condition.AdUnitDistrictRepository;
 import com.remember.dao.unit_condition.AdUnitItRepository;
 import com.remember.dao.unit_condition.AdUnitKeywordRepository;
 import com.remember.dao.unit_condition.CreativeUnitRepository;
-import com.remember.dump.table.AdCreativeTable;
-import com.remember.dump.table.AdPlanTable;
-import com.remember.dump.table.AdUnitTable;
+import com.remember.dump.DConstant;
+import com.remember.dump.table.*;
 import com.remember.entity.AdPlan;
 import com.remember.entity.AdUnit;
 import com.remember.entity.Creative;
+import com.remember.entity.unit_condition.AdUnitDistrict;
+import com.remember.entity.unit_condition.AdUnitIt;
+import com.remember.entity.unit_condition.AdUnitKeyword;
+import com.remember.entity.unit_condition.CreativeUnit;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -55,6 +59,19 @@ public class DumpDataService {
     private AdUnitDistrictRepository unitDistrictRepository;
     @Autowired
     private CreativeUnitRepository creativeUnitRepository;
+
+
+    @Test
+    public void dumpAdTableData(){
+        dumpAdPlanTable(String.format("%s%s",DConstant.DATA_ROOT_DIR,DConstant.AD_PLAN));
+        dumpAdUnitItTable(String.format("%s%s",DConstant.DATA_ROOT_DIR,DConstant.AD_UNIT_IT));
+        dumpAdUnitDistrictTable(String.format("%s%s",DConstant.DATA_ROOT_DIR,DConstant.AD_UNIT_DISTRICT));
+        dumpAdUnitKeywordTable(String.format("%s%s",DConstant.DATA_ROOT_DIR,DConstant.AD_UNIT_KEYWORD));
+        dumpAdUnitItTable(String.format("%s%s",DConstant.DATA_ROOT_DIR,DConstant.AD_UNIT_IT));
+        dumpCreativeTable(String.format("%s%s",DConstant.DATA_ROOT_DIR,DConstant.AD_CREATIVE));
+        dumpCreativeUnitTable(String.format("%s%s",DConstant.DATA_ROOT_DIR,DConstant.AD_CREATIVE_UNIT));
+    }
+
 
     private void dumpAdPlanTable(String fileName){
         List<AdPlan> adPlans = planRepository.findAllByPlanStatus(CommonStatus.VALID.getStatus());
@@ -117,4 +134,86 @@ public class DumpDataService {
             log.error("dumpAdUnitTable error");
         }
     }
+    private void dumpCreativeUnitTable(String fileName){
+        List<CreativeUnit> creativeUnits = creativeUnitRepository.findAll();
+        if(CollectionUtils.isEmpty(creativeUnits)){
+            return;
+        }
+        List<AdCreativeUnitTable> creativeUnitTables = new ArrayList<>();
+        //将表填充
+        creativeUnits.forEach(i -> creativeUnitTables.add(new AdCreativeUnitTable(i.getCreativeId(),i.getUnitId())));
+        //将填充之后的表持久化到本地文件中
+        Path path = Paths.get(fileName);
+        try(BufferedWriter writer = Files.newBufferedWriter(path)){
+            for(AdCreativeUnitTable adCreativeUnitTable : creativeUnitTables){
+                writer.write(JSON.toJSONString(adCreativeUnitTable));
+                writer.newLine();
+            }
+            writer.close();
+        }catch (IOException e){
+            log.error("dumpAdCreativeUnitTable error");
+        }
+    }
+    private void dumpAdUnitDistrictTable(String fileName){
+        List<AdUnitDistrict> adUnitDistricts = unitDistrictRepository.findAll();
+        if(CollectionUtils.isEmpty(adUnitDistricts)){
+            return;
+        }
+        List<AdUnitDistrictTable> adUnitDistrictsTable = new ArrayList<>();
+        //将表填充
+        adUnitDistricts.forEach(i -> adUnitDistrictsTable.add(new AdUnitDistrictTable(i.getUnitId(),i.getProvince(),i.getCity())));
+        //将填充之后的表持久化到本地文件中
+        Path path = Paths.get(fileName);
+        try(BufferedWriter writer = Files.newBufferedWriter(path)){
+            for(AdUnitDistrictTable adUnitDistrictTable : adUnitDistrictsTable){
+                writer.write(JSON.toJSONString(adUnitDistrictTable));
+                writer.newLine();
+            }
+            writer.close();
+        }catch (IOException e){
+            log.error("dumpAdUnitDistrictTable error");
+        }
+    }
+
+    private void dumpAdUnitItTable(String fileName){
+        List<AdUnitIt> adUnitIts = unitItRepository.findAll();
+        if(CollectionUtils.isEmpty(adUnitIts)){
+            return;
+        }
+        List<AdUnitItTable> adUnitItTables = new ArrayList<>();
+        //将表填充
+        adUnitIts.forEach(i -> adUnitItTables.add(new AdUnitItTable(i.getUnitId(),i.getItTag())));
+        //将填充之后的表持久化到本地文件中
+        Path path = Paths.get(fileName);
+        try(BufferedWriter writer = Files.newBufferedWriter(path)){
+            for(AdUnitItTable adUnitItTable : adUnitItTables){
+                writer.write(JSON.toJSONString(adUnitItTable));
+                writer.newLine();
+            }
+            writer.close();
+        }catch (IOException e){
+            log.error("dumpAdUnitItTable error");
+        }
+    }
+    private void dumpAdUnitKeywordTable(String fileName){
+        List<AdUnitKeyword> adUnitKeywords = unitKeywordRepository.findAll();
+        if(CollectionUtils.isEmpty(adUnitKeywords)){
+            return;
+        }
+        List<AdUnitKeywordTable> adUnitKeywordTables = new ArrayList<>();
+        //将表填充
+        adUnitKeywords.forEach(i -> adUnitKeywordTables.add(new AdUnitKeywordTable(i.getUnitId(),i.getKeyword())));
+        //将填充之后的表持久化到本地文件中
+        Path path = Paths.get(fileName);
+        try(BufferedWriter writer = Files.newBufferedWriter(path)){
+            for(AdUnitKeywordTable adUnitKeywordTable : adUnitKeywordTables){
+                writer.write(JSON.toJSONString(adUnitKeywordTable));
+                writer.newLine();
+            }
+            writer.close();
+        }catch (IOException e){
+            log.error("dumpAdUnitKeywordTable error");
+        }
+    }
+
 }

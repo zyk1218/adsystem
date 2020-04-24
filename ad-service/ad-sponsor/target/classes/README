@@ -1,0 +1,34 @@
+关于application.yml配置的说明：
+
+这个是ad-sponsor的服务器配置
+server:
+  port: 7000
+  servlet:
+    context-path: /ad-sponsor //URI，当调用该服务时会访问的URI
+
+spring:
+  application:
+    name: eureka-client-ad-sponsor //应用的名称
+  jpa: //jpa是java persistence API的简称，中文名是持久层API，描述对象-关系表的映射关系，并将运行期的实体对象持久化到数据库中。
+    show-sql: true //是否打印sql语句。
+    hibernate:
+      ddl-auto: none //该配置一共有四个选项：
+                        //1.create:启动时删除数据库中的表，然后创建，退出时不删除
+                        //2.create-drop:在上边的基础上退出时删除表，如果表不存在就报错
+                        //3.update:如果启动时表格式不一致则更新表，原有数据保留
+                        //4.volidate:项目启动时对表结构进行检验，不一致就报错。
+    properties:
+      hibernate.format_sql: true //格式化地打印hibernate生成的sql语句
+    open-in-view: false //可以在事务外访问懒加载的数据。设置为false是因为如果我们在事务中需要访问到懒加载的Bean时，找不到数据会报错。
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/adSystem?autoReconnect=true
+    username: root
+    password: 1234
+    tomcat:
+      max-active: 4 //最大数据库连接池连接数
+      min-idle: 2 //最小空闲的连接数
+      initial-size: 2 //初始化大小
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:8000/eureka/ //将服务注册到该eureka上
