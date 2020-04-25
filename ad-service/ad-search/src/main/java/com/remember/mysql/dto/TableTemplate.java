@@ -19,7 +19,7 @@ import java.util.Map;
 @NoArgsConstructor
 public class TableTemplate {
     private String tableName;
-    private String level;
+    private Integer level;
 
     /**
      * 操作类型和相关的列

@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e205d572-0781-4f8c-b7d5-6ed0dd2b69db" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/JsonTable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/TableTemplate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/Template.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ad-service/ad-search/src/main/resources/template.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/ParseTemplate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/JsonTable.java" afterPath="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/JsonTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/TableTemplate.java" afterPath="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/TableTemplate.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,28 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UnitKeywordIndex.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/keyword/UnitKeywordIndex.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdLevelDataHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/handler/AdLevelDataHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="106" column="5" lean-forward="false" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="IndexFileLoader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/IndexFileLoader.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -87,8 +64,8 @@
       <file leaf-file-name="template.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/resources/template.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="1" column="24" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+            <state relative-caret-position="120">
+              <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -97,8 +74,8 @@
       <file leaf-file-name="Template.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/Template.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="14" selection-end-column="18" />
+            <state relative-caret-position="480">
+              <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,14 +83,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableTemplate.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TableTemplate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/TableTemplate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+            <state relative-caret-position="324">
+              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="21" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParseTemplate.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/ParseTemplate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Supplier.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/util/function/Supplier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OpType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/constant/OpType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,21 +130,11 @@
       <file leaf-file-name="JsonTable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/JsonTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            <state relative-caret-position="564">
+              <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UnitItIndex.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/interest/UnitItIndex.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -168,7 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/client/vo/AdPlanGetRequest.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/client/vo/AdPlanGetResponse.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/client/vo/AdPlan.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/SearchApplication.java" />
@@ -216,8 +214,9 @@
         <option value="$PROJECT_DIR$/ad-service/ad-search/pom.xml" />
         <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/service/BinlogServiceTest.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/resources/template.json" />
-        <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/JsonTable.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/Template.java" />
+        <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/JsonTable.java" />
+        <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/ParseTemplate.java" />
         <option value="$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/TableTemplate.java" />
       </list>
     </option>
@@ -1165,7 +1164,7 @@
       <workItem from="1587201712323" duration="66164000" />
       <workItem from="1587636864820" duration="26095000" />
       <workItem from="1587785887266" duration="203000" />
-      <workItem from="1587797286318" duration="5608000" />
+      <workItem from="1587797286318" duration="9020000" />
     </task>
     <servers />
   </component>
@@ -1184,10 +1183,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117284000" />
+    <option name="totallyTimeSpent" value="120696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1456" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1201,7 +1201,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.510235" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3070508" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3070508" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16017488" sideWeight="0.4939759" order="0" side_tool="false" content_ui="combo" />
@@ -1259,20 +1259,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/keyword/UnitKeywordObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/district/UnitDistrictObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/index/creative/CreativeObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
@@ -1378,6 +1364,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="8" column="54" lean-forward="false" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#237#238#0" expanded="false" />
+            <element signature="e#298#299#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1445,13 +1436,6 @@
             <element signature="imports" expanded="false" />
             <element signature="e#1643#1667#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/constant/OpType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1578,7 +1562,7 @@
         <state relative-caret-position="2520">
           <caret line="106" column="5" lean-forward="false" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1611,28 +1595,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/JsonTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/resources/template.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="24" lean-forward="true" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        <state relative-caret-position="120">
+          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/Template.java">
+    <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/constant/OpType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="150">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/util/function/Supplier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/JsonTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1641,8 +1631,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/TableTemplate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        <state relative-caret-position="324">
+          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="21" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/Template.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ad-service/ad-search/src/main/java/com/remember/mysql/dto/ParseTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
