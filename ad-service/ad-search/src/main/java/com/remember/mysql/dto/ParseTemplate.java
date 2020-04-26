@@ -14,6 +14,7 @@ import java.util.function.Supplier;
   * @date 2020/4/25 19:34
  * 对Template进行解析
  * 最终目的是要将Template类解析成ParseTemplate类
+ * 这个类的特点是：两字段，一个是数据库名称，一个是集合类，对应的是表名和表模板。
   */
 @Data
 public class ParseTemplate {
