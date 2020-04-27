@@ -20,7 +20,7 @@ import java.util.Map;
 /**
   * @author remember
   * @date 2020/4/26 10:58
- * 这个类完成了两个功能，一是将json文件加载出来，二是将原始索引与Binlog的索引对应起来。
+ * 这个类完成了两个功能，一是将json文件加载出来生成Template，二是将原始索引与Binlog的索引对应起来。
   */
 @Slf4j
 @Component
