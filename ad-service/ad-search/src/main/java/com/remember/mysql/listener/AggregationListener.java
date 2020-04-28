@@ -44,7 +44,7 @@ public class AggregationListener implements BinaryLogClient.EventListener{
             this.dbName = data.getDatabase();
             return;
         }
-        if(type != EventType.EXT_UPDATE_ROWS && type != EventType.EXT_DELETE_ROWS && type != EventType.EXT_WRITE_ROWS){
+        if(type != EventType.UPDATE_ROWS && type != EventType.DELETE_ROWS && type != EventType.WRITE_ROWS){
             return;
         }
         //数据库和数据表名是否已被填充
