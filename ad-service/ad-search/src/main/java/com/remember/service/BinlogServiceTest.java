@@ -16,7 +16,7 @@ public class BinlogServiceTest {
         //客户端连接，实质上是将我们本地（这个本地指的就是我们的127.0.0.1）MySQL伪装成一个Slave，绑定于Master
 //        Update------------------
 //        UpdateRowsEventData{tableId=102, includedColumnsBeforeUpdate={0, 1, 2}, includedColumns={0, 1, 2}, rows=[
-//            {before=[1, 23, 测试], after=[1, 23, 更新测试]}
+//            {before=[1, 23, 测试], after=[1,  , 更新测试]}
 //]}
 //        Write------------------
 //        WriteRowsEventData{tableId=102, includedColumns={0, 1, 2}, rows=[
