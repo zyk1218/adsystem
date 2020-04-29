@@ -25,7 +25,7 @@ import java.util.Map;
 @Component
 public class IncrementListener implements IListener{
 
-    @Resource(name = "")//为什么这里用空串指定？这样就可以让spring去按类型注入了。
+    @Resource(name = "indexSender")
     private ISender sender;
 
     private final AggregationListener aggregationListener;
