@@ -1,11 +1,7 @@
 package com.remember.sender.index;
 
 import com.alibaba.fastjson.JSON;
-import com.remember.client.vo.AdPlan;
-import com.remember.dump.table.AdCreativeTable;
-import com.remember.dump.table.AdCreativeUnitTable;
-import com.remember.dump.table.AdPlanTable;
-import com.remember.dump.table.AdUnitTable;
+import com.remember.dump.table.*;
 import com.remember.handler.AdLevelDataHandler;
 import com.remember.index.DataLevel;
 import com.remember.mysql.constant.Constant;
@@ -34,7 +30,7 @@ public class IndexSender implements ISender {
         }else if(DataLevel.LEVEL3.getLevel().equals(level)){
             Level3RowData(rowData);
         }else if(DataLevel.LEVEL4.getLevel().equals(level)){
-
+            Level4RowData(rowData);
         }else{
             log.error("MysqlRowData ERROR :{}", JSON.toJSON(rowData));
         }
@@ -128,4 +124,60 @@ public class IndexSender implements ISender {
             adUnitTables.forEach( p -> AdLevelDataHandler.handleLevel3(p,rowData.getOpType()));
         }
     }
+    private void Level4RowData(MysqlRowData rowData) {
+        switch (rowData.getTableName()){
+            case Constant.AD_UNIT_DISTRICT_TABLE_INFO.TABLE_NAME :
+                ArrayList<AdUnitDistrictTable> adUnitDistrictTables = new ArrayList<>();
+                for (Map<String, String> fieldValueMap : rowData.getFieldValueMap()) {
+                    AdUnitDistrictTable adUnitDistrictTable = new AdUnitDistrictTable();
+                    fieldValueMap.forEach((k,v)->{
+                        switch (k){
+                            case Constant.AD_UNIT_DISTRICT_TABLE_INFO.COLUMN_UNIT_ID : adUnitDistrictTable.setUnitId(Long.valueOf(v));
+                            break;
+                            case Constant.AD_UNIT_DISTRICT_TABLE_INFO.COLUMN_CITY : adUnitDistrictTable.setCity(v);
+                            break;
+                            case Constant.AD_UNIT_DISTRICT_TABLE_INFO.COLUMN_PROVINCE : adUnitDistrictTable.setProvince(v);
+                            break;
+                        }
+                    });
+                    adUnitDistrictTables.add(adUnitDistrictTable);
+                }
+                adUnitDistrictTables.forEach( p -> AdLevelDataHandler.handleLevel4(p,rowData.getOpType()));
+                break;
+            case Constant.AD_UNIT_KEYWORD_TABLE_INFO.TABLE_NAME :
+                ArrayList<AdUnitKeywordTable> adUnitKeywordTables = new ArrayList<>();
+                for (Map<String, String> fieldValueMap : rowData.getFieldValueMap()) {
+                    AdUnitKeywordTable adUnitKeywordTable = new AdUnitKeywordTable();
+                    fieldValueMap.forEach((k,v) -> {
+                        switch (k){
+                            case Constant.AD_UNIT_KEYWORD_TABLE_INFO.COLUMN_UNIT_ID : adUnitKeywordTable.setUnitId(Long.valueOf(v));
+                            break;
+                            case Constant.AD_UNIT_KEYWORD_TABLE_INFO.COLUMN_KEYWORD : adUnitKeywordTable.setKeyword(v);
+                            break;
+                        }
+                    });
+                    adUnitKeywordTables.add(adUnitKeywordTable);
+                }
+                adUnitKeywordTables.forEach(p->AdLevelDataHandler.handleLevel4(p,rowData.getOpType()));
+                break;
+            case Constant.AD_UNIT_IT_TABLE_INFO.TABLE_NAME :
+                ArrayList<AdUnitItTable> adUnitItTables = new ArrayList<>();
+                for (Map<String, String> fieldValueMap : rowData.getFieldValueMap()) {
+                    AdUnitItTable adUnitItTable = new AdUnitItTable();
+                    fieldValueMap.forEach((k,v) -> {
+                        switch (k){
+                            case Constant.AD_UNIT_IT_TABLE_INFO.COLUMN_IT_TAG : adUnitItTable.setItTag(v);
+                            break;
+                            case Constant.AD_UNIT_IT_TABLE_INFO.COLUMN_UNIT_ID : adUnitItTable.setUnitId(Long.valueOf(v));
+                            break;
+                        }
+                    });
+                    adUnitItTables.add(adUnitItTable);
+                }
+                adUnitItTables.forEach(p->AdLevelDataHandler.handleLevel4(p,rowData.getOpType()));
+                break;
+
+        }
+    }
+
 }
