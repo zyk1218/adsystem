@@ -19,7 +19,7 @@ import java.util.Map;
 @AllArgsConstructor
 public class MysqlRowData {
     private String tableName;
-    private String level;
+    private Integer level;
     private OpType opType;
     private List<Map<String,String>> fieldValueMap = new ArrayList<>();
 }
