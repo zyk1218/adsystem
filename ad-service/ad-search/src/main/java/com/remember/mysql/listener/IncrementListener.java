@@ -43,19 +43,6 @@ public class IncrementListener implements IListener{
             aggregationListener.register(v,k,this);
         });
     }
-
-    /*
-    该方法的目标是将BinlogEventRowData转成MysqlRowData
-    private TableTemplate table;
-    private EventType eventType;
-    private List<Map<String,String>> before;
-    private List<Map<String,String>> after;
-
-    private String tableName;
-    private String level;
-    private OpType opType;
-    private List<Map<String,String>> fieldValueMap = new ArrayList<>();
-     */
     @Override
     public void onEvent(BinlogEventRowData eventData) {
         //将event包装成mysqlRowData
