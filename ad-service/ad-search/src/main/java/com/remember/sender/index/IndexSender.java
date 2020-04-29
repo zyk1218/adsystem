@@ -3,7 +3,9 @@ package com.remember.sender.index;
 import com.alibaba.fastjson.JSON;
 import com.remember.client.vo.AdPlan;
 import com.remember.dump.table.AdCreativeTable;
+import com.remember.dump.table.AdCreativeUnitTable;
 import com.remember.dump.table.AdPlanTable;
+import com.remember.dump.table.AdUnitTable;
 import com.remember.handler.AdLevelDataHandler;
 import com.remember.index.DataLevel;
 import com.remember.mysql.constant.Constant;
@@ -56,13 +58,12 @@ public class IndexSender implements ISender {
                         case Constant.AD_PLAN_TABLE_INFO.COLUMN_START_DATE : adPlanTable.setStartDate(CommonUtils.parseStringDate(v));
                         break;
                         case Constant.AD_PLAN_TABLE_INFO.COLUMN_END_DATE : adPlanTable.setEndDate(CommonUtils.parseStringDate(v));
+                        break;
                     }
                 });
                 planTables.add(adPlanTable);
             }
-            planTables.forEach( (p) -> {
-                AdLevelDataHandler.handleLevel2(p,rowData.getOpType());
-            });
+            planTables.forEach( (p) -> AdLevelDataHandler.handleLevel2(p,rowData.getOpType()));
         } else if(rowData.getTableName().equals(Constant.AD_CREATIVE_TABLE_INFO.TABLE_NAME)){
             List<AdCreativeTable> creativeTables = new ArrayList<>();
             for (Map<String, String> fieldValueMap : rowData.getFieldValueMap()) {
@@ -82,16 +83,49 @@ public class IndexSender implements ISender {
                         case Constant.AD_CREATIVE_TABLE_INFO.COLUMN_AUDIT_STATUS : creativeTable.setAuditStatus(Integer.valueOf(v));
                         break;
                         case Constant.AD_CREATIVE_TABLE_INFO.COLUMN_URL : creativeTable.setAdUrl(v);
+                        break;
                     }
                 });
                 creativeTables.add(creativeTable);
             }
-            creativeTables.forEach((p)->{
-                AdLevelDataHandler.handleLevel2(p,rowData.getOpType());
-            });
+            creativeTables.forEach((p)-> AdLevelDataHandler.handleLevel2(p,rowData.getOpType()));
         }
     }
     private void Level3RowData(MysqlRowData rowData) {
-
+        if(rowData.getTableName().equals(Constant.AD_CREATIVE_UNIT_TABLE_INFO.TABLE_NAME)){
+            List<AdCreativeUnitTable> adCreativeUnitTables = new ArrayList<>();
+            for (Map<String, String> fieldValueMap : rowData.getFieldValueMap()) {
+                AdCreativeUnitTable adCreativeUnitTable = new AdCreativeUnitTable();
+                fieldValueMap.forEach((k,v) ->{
+                    switch (k){
+                        case Constant.AD_CREATIVE_UNIT_TABLE_INFO.COLUMN_CREATIVE_ID : adCreativeUnitTable.setAdId(Long.valueOf(v));
+                        break;
+                        case Constant.AD_CREATIVE_UNIT_TABLE_INFO.COLUMN_UNIT_ID : adCreativeUnitTable.setUnitId(Long.valueOf(v));
+                        break;
+                    }
+                });
+                adCreativeUnitTables.add(adCreativeUnitTable);
+            }
+            adCreativeUnitTables.forEach(p -> AdLevelDataHandler.handleLevel3(p,rowData.getOpType()));
+        }else if(rowData.getTableName().equals(Constant.AD_UNIT_TABLE_INFO.TABLE_NAME)){
+            List<AdUnitTable> adUnitTables = new ArrayList<>();
+            for (Map<String, String> fieldValueMap : rowData.getFieldValueMap()) {
+                AdUnitTable adUnitTable = new AdUnitTable();
+                fieldValueMap.forEach((k,v) ->{
+                    switch (k){
+                        case Constant.AD_UNIT_TABLE_INFO.COLUMN_ID : adUnitTable.setUnitId(Long.valueOf(v));
+                        break;
+                        case Constant.AD_UNIT_TABLE_INFO.COLUMN_PLAN_ID : adUnitTable.setPlanId(Long.valueOf(v));
+                        break;
+                        case Constant.AD_UNIT_TABLE_INFO.COLUMN_POSITION_TYPE : adUnitTable.setPositionType(Integer.valueOf(v));
+                        break;
+                        case Constant.AD_UNIT_TABLE_INFO.COLUMN_UNIT_STATUS : adUnitTable.setUnitStatus(Integer.valueOf(v));
+                        break;
+                    }
+                });
+                adUnitTables.add(adUnitTable);
+            }
+            adUnitTables.forEach( p -> AdLevelDataHandler.handleLevel3(p,rowData.getOpType()));
+        }
     }
 }
