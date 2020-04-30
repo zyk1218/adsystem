@@ -2,9 +2,10 @@ package com.remember.index.creative;
 
 import com.remember.index.IndexAware;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.stereotype.Component;
 
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -53,4 +54,22 @@ public class CreativeIndex implements IndexAware<Long,CreativeObject> {
         objectMap.put(key,value);
         log.info("objectMap after add : {}",objectMap);
     }
+
+    public List<CreativeObject> fetch(Collection<Long> adIds){
+        if(CollectionUtils.isEmpty(adIds)){
+            return Collections.emptyList();
+        }
+        List<CreativeObject> creativeObjects = new ArrayList<>();
+        adIds.forEach( u -> {
+            CreativeObject creativeObject = objectMap.get(u);
+            if(null == creativeObject){
+                log.error("CreativeObject not found  : {}",u);
+                return;
+            }else{
+                creativeObjects.add(creativeObject);
+            }
+        });
+        return creativeObjects;
+    }
+
 }
