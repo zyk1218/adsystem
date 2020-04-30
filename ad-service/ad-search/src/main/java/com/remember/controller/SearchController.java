@@ -5,6 +5,9 @@ import com.remember.annotation.IgnoreResponseAdvice;
 import com.remember.client.SponsorClient;
 import com.remember.client.vo.AdPlan;
 import com.remember.client.vo.AdPlanGetRequest;
+import com.remember.search.ISearch;
+import com.remember.search.vo.SearchRequest;
+import com.remember.search.vo.SearchResponse;
 import com.remember.vo.CommonResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,14 +26,17 @@ import java.util.List;
 @RestController
 public class SearchController {
 
+    private final ISearch search;
+
     private final RestTemplate restTemplate;
 
     private final SponsorClient sponsorClient;
 
     @Autowired
-    public SearchController(RestTemplate restTemplate, SponsorClient sponsorClient) {
+    public SearchController(RestTemplate restTemplate, SponsorClient sponsorClient, ISearch search) {
         this.restTemplate = restTemplate;
         this.sponsorClient = sponsorClient;
+        this.search = search;
     }
     @SuppressWarnings("all")
     @IgnoreResponseAdvice //不对该响应进行拦截。
@@ -46,6 +52,12 @@ public class SearchController {
     public CommonResponse<List<AdPlan>> getAdPlansByFeign(@RequestBody AdPlanGetRequest request){
         log.info("ad-search : get adPlanByFeign -> {}", JSON.toJSONString(request));
         return sponsorClient.getAdPlans(request);
+    }
+
+    @PostMapping("/fetchAds")
+    public SearchResponse fetchAds(@RequestBody SearchRequest request){
+        log.info("ad-search : fetchAds -> {}",JSON.toJSONString(request));
+        return search.fetchAds(request);
     }
 
 

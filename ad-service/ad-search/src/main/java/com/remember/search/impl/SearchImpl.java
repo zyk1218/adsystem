@@ -1,7 +1,13 @@
 package com.remember.search.impl;
 
+import com.alibaba.fastjson.JSON;
+import com.remember.index.CommonStatus;
 import com.remember.index.DataTable;
 import com.remember.index.adunit.AdUnitIndex;
+import com.remember.index.adunit.AdUnitObject;
+import com.remember.index.creative.CreativeIndex;
+import com.remember.index.creative.CreativeObject;
+import com.remember.index.creativeunit.CreativeUnitIndex;
 import com.remember.index.district.UnitDistrictIndex;
 import com.remember.index.interest.UnitItIndex;
 import com.remember.index.keyword.UnitKeywordIndex;
@@ -42,6 +48,7 @@ public class SearchImpl implements ISearch{
             Set<Long> targetUnitIdSet;
             //根据流量类型获取初始AdUnit
             Set<Long> adUnitIdSet = DataTable.of(AdUnitIndex.class).match(adSlot.getPositionType());
+            //根据请求匹配信息进行再过滤
             if(relation == FeatureRelation.AND){
                 filterDistrictFeature(adUnitIdSet,districtFeature);
                 filterItFeature(adUnitIdSet,itFeature);
@@ -50,8 +57,18 @@ public class SearchImpl implements ISearch{
             }else{
                 targetUnitIdSet = getORRelationUnitIds(adUnitIdSet,keywordFeature,itFeature,districtFeature);
             }
+            List<AdUnitObject> unitObjects = DataTable.of(AdUnitIndex.class).fetch(targetUnitIdSet);
+            //根据推广单元和推广计划的状态进行再过滤
+            filterAdUnitAndPlanStatus(unitObjects,CommonStatus.VALID);
+            //根据推广单元获取到创意
+            List<Long> adIds = DataTable.of(CreativeUnitIndex.class).selectAds(unitObjects);
+            List<CreativeObject> creatives = DataTable.of(CreativeIndex.class).fetch(adIds);
+            //通过adSlot对创意进行过滤
+            filterCreativeByAdSlot(creatives,adSlot.getHeight(),adSlot.getWidth(),adSlot.getType());
+            adSlot2Ads.put(adSlot.getAdSlotCode(),buildCreativeResponse(creatives));
         }
-        return null;
+        log.info("fetch ads : {} - {}", JSON.toJSONString(request),JSON.toJSONString(searchResponse));
+        return searchResponse;
     }
     private void filterKeywordFeature(Collection<Long> adUnitIds,KeywordFeature keywordFeature){
         if(CollectionUtils.isEmpty(adUnitIds)){
@@ -95,5 +112,29 @@ public class SearchImpl implements ISearch{
 
         return new HashSet<>(CollectionUtils.union(CollectionUtils.union(keywordUnitIdSet,districtUnitIdSet),itUnitIdSet));
 
+    }
+
+    private void filterAdUnitAndPlanStatus(List<AdUnitObject> unitObjects, CommonStatus status){
+        if(CollectionUtils.isEmpty(unitObjects)){
+            return;
+        }
+        CollectionUtils.filter(unitObjects,unitObject->unitObject.getUnitStatus()
+                .equals(status.getStatus()) && unitObject.getAdPlanObject().getPlanStatus().equals(status.getStatus()));
+    }
+
+    private void filterCreativeByAdSlot(List<CreativeObject> creativeObjects,Integer height,Integer width,List<Integer> type){
+        if(CollectionUtils.isEmpty(creativeObjects)){
+            return;
+        }
+        CollectionUtils.filter(creativeObjects,creativeObject -> creativeObject.getAuditStatus().equals(CommonStatus.VALID.getStatus())
+                && creativeObject.getHeight().equals(height) && creativeObject.getWidth().equals(width) && type.contains(creativeObject.getType()));
+    }
+
+    private List<SearchResponse.Creative> buildCreativeResponse(List<CreativeObject> creativeObjects){
+        if(CollectionUtils.isEmpty(creativeObjects)){
+            return Collections.emptyList();
+        }
+        CreativeObject creativeObject = creativeObjects.get(Math.abs(new Random().nextInt()) % creativeObjects.size());
+        return Collections.singletonList(SearchResponse.convert(creativeObject));
     }
 }
